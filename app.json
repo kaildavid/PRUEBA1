@@ -8,7 +8,7 @@
         "telegram bot"
     ],
     "env": {
-        "BOT_TOKEN": {
+        "TELEGRAM_TOKEN": {
             "description": "Your Bot token from @Botfather"
         },
         "API_ID": {
