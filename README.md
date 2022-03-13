@@ -4,7 +4,7 @@ Producto creado por desarrolladores cubanos para cubanos, este repositorio es to
 Actualmente es la versión original del código con varios cambios realizados por mí. Actualmente me encuentro trabajando en una v2.0 de este bot, una vez culminada se sustituirá el código fuente de este repositorio.
 
 ## Deploy a Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ravenclawldz/CoinPayments-API)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ravenclawldz/moodle-uploader)
 
 ### Deploy a VPS
 
