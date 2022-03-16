@@ -279,7 +279,7 @@ async def process(ev: events.NewMessage.Event):
     text = ev.message.text
     file = ev.message.file
     user_id = ev.message.peer_id.user_id
-    if user_id in OWNER:
+    if user_id == OWNER:
 
         if '#watch' in text:
             await bot.send_message(ev.chat_id, '🕠Esperando...')
@@ -305,7 +305,7 @@ async def process(ev: events.NewMessage.Event):
 async def process(ev: events.NewMessage.Event):
     print('start...')
     user_id = ev.message.peer_id.user_id
-    if user_id in OWNER:
+    if user_id == OWNER:
         Hora = str(datetime.now(IST).time()).split(".")
         Hora.pop(-1)
         h = "".join(map(str, Hora))
@@ -322,7 +322,7 @@ async def info(ev: events.NewMessage.Event):
 
     print('info...')
     user_id = ev.message.peer_id.user_id
-    if user_id in OWNER:
+    if user_id == OWNER:
         await bot.send_message(
             ev.chat_id,
             f'❕Información❕\n\n📡Moodle: {HOST}\n👤Usuario: <code>{ACCOUNT}</code>\n🔑Contraseña: <code>{PASSWORD}</code>\n'
@@ -337,7 +337,7 @@ async def info(ev: events.NewMessage.Event):
 @bot.on(events.NewMessage(pattern='/pro'))
 async def process(ev: events.NewMessage.Event):
     user_id = ev.message.peer_id.user_id
-    if user_id in OWNER:
+    if user_id == OWNER:
         await bot.send_message(ev.chat_id, f'📋Procesos:\n\n{len(links)}\n\n/up\n/clear')
     else:
         await bot.send_message(ev.chat_id, '❗️Acceso Denegado❗️')
@@ -347,7 +347,7 @@ async def process(ev: events.NewMessage.Event):
 @bot.on(events.NewMessage(pattern='/clear'))
 async def process(ev: events.NewMessage.Event):
     user_id = ev.message.peer_id.user_id
-    if user_id in OWNER:
+    if user_id == OWNER:
         await bot.send_message(ev.chat_id, f'🗑 {len(links)} Procesos Limpiados 🗑\n/pro')
         links.clear()
     else:
@@ -359,7 +359,7 @@ async def process(ev: events.NewMessage.Event):
 
     print('Up...')
     user_id = ev.message.peer_id.user_id
-    if user_id in OWNER:
+    if user_id == OWNER:
         msg = await bot.send_message(ev.chat_id, '🔬Procesando...')
         await dll(ev, bot, msg)
     else:
@@ -371,7 +371,7 @@ async def process(ev: events.NewMessage.Event):
 async def process(ev: events.NewMessage.Event):
     print('files...')
     user_id = ev.message.peer_id.user_id
-    if user_id in OWNER:
+    if user_id == OWNER:
 
         message = await bot.send_message(ev.chat_id, 'Conectando...')
 
